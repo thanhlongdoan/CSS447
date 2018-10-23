@@ -9,6 +9,10 @@
 {
     @Html.AntiForgeryToken()
     <h4>Create a new account.</h4>
+    if(ViewBag.ThongBao != null)
+    {
+        <label class="text-success">@ViewBag.ThongBao</label>
+    }
     <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
